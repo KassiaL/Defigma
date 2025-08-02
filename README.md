@@ -7,7 +7,7 @@ Defigma Extension adds advanced linear and radial gradient support to Defold pro
 Add this dependency to your game.project file:
 
 ```text
-https://github.com/yourusername/defigma-extension/archive/master.zip
+https://github.com/KassiaL/Defigma/archive/master.zip
 ```
 
 Make sure you've installed the Defigma Figma Plugin and have exported your design to your Defold project.
