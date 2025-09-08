@@ -1,9 +1,5 @@
 local M = {}
 
-local function table_to_vec4(c)
-	return vmath.vector4(c.r, c.g, c.b, c.a)
-end
-
 function M.apply_all(gradients)
 	for k, v in pairs(gradients) do
 		M.apply(k, gradients)
@@ -20,8 +16,8 @@ function M.apply(node_name, gradients)
 	local g = gradients[node_name]
 
 	local node = gui.get_node(node_name)
-	gui.set(node, "gradient_stop0", table_to_vec4(g.stops[1].color))
-	gui.set(node, "gradient_stop1", table_to_vec4(g.stops[2].color))
+	gui.set(node, "gradient_stop0", g.stops[1].color)
+	gui.set(node, "gradient_stop1", g.stops[2].color)
 	local gradient_data = g.data
 
 	if g.type == "radial" then
